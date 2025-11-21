@@ -36,9 +36,7 @@ function showPage(pageId) {
     if(pageId === 'inicio') crearDecoracion('💚', true); 
     if(pageId === 'historia') crearDecoracion('🌸');
     if(pageId === 'tiempo') crearDecoracion('💜', false, true);
-    
     if(pageId === 'juntos') { crearDecoracion('🖤', false, false, true); renderPuzzle(); } 
-    
     if(pageId === 'felicidades') crearDecoracion('🎉', true);
     if(pageId === 'recuerdos') crearDecoracion('💭', false, false, false);
 }
@@ -86,6 +84,7 @@ function clickCentroFlor() {
     document.getElementById('flower-msg').innerHTML = petalos >= 6 ? "¡TE AMO! ❤️" : "Faltan pétalos...";
 }
 
+/* LOGICA DEL ROMPECABEZAS */
 const pieces = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let currentPieces = [...pieces].sort(() => Math.random() - 0.5);
 let selectedIndex = -1;
@@ -94,11 +93,10 @@ function renderPuzzle() {
     const container = document.getElementById('puzzle-container');
     container.innerHTML = '';
 
+    // Solo mezclamos si acabamos de entrar y ya estaba resuelto (para que el usuario tenga que jugar)
     if (currentPieces.every((v, i) => v === i)) {
-        currentPieces = [...pieces].sort(() => Math.random() - 0.5);
-        while(currentPieces.every((v, i) => v === i)) {
-             currentPieces = [...pieces].sort(() => Math.random() - 0.5);
-        }
+        // Nota: Si está resuelto al iniciar, lo mezclamos.
+        // Pero si el usuario lo acaba de resolver, NO lo mezclamos aquí.
     }
     
     currentPieces.forEach((val, index) => {
@@ -114,21 +112,42 @@ function renderPuzzle() {
             if (selectedIndex === -1) { selectedIndex = index; renderPuzzle(); } 
             else {
                 [currentPieces[index], currentPieces[selectedIndex]] = [currentPieces[selectedIndex], currentPieces[index]];
-                selectedIndex = -1; renderPuzzle();
-                if (currentPieces.every((v, i) => v === i)) {
-                    setTimeout(() => document.getElementById('puzzle-reward').style.display='flex', 500);
-                    currentPieces = [...pieces].sort(() => Math.random() - 0.5); 
-                    while(currentPieces.every((v, i) => v === i)) {
-                         currentPieces = [...pieces].sort(() => Math.random() - 0.5);
-                    }
-                }
+                selectedIndex = -1; 
+                renderPuzzle(); // Renderizamos el movimiento
+                
+                // Verificamos si ganó DESPUÉS del movimiento
+                checkWin();
             }
         };
         container.appendChild(div);
     });
 }
 
+function checkWin() {
+    if (currentPieces.every((v, i) => v === i)) {
+        // Si ganó, esperamos un poquito y mostramos el premio.
+        // NO REINICIAMOS las piezas aquí.
+        setTimeout(() => {
+            document.getElementById('puzzle-reward').style.display = 'flex';
+        }, 300);
+    }
+}
+
+// Función nueva para cerrar el premio y EN ESE MOMENTO reiniciar el juego
+function cerrarRecompensa() {
+    document.getElementById('puzzle-reward').style.display = 'none';
+    
+    // Ahora sí mezclamos para la próxima vez
+    currentPieces = [...pieces].sort(() => Math.random() - 0.5); 
+    while(currentPieces.every((v, i) => v === i)) {
+         currentPieces = [...pieces].sort(() => Math.random() - 0.5);
+    }
+    renderPuzzle();
+}
+
 window.onload = function() {
+    // Asegurar mezcla inicial
+    currentPieces = [...pieces].sort(() => Math.random() - 0.5);
     renderPuzzle();
 }
 
