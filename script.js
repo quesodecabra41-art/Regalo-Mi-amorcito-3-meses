@@ -33,45 +33,62 @@ function showPage(pageId) {
     }
 
     limpiarDecoracion();
-    // Frecuencia más rápida de decoración
-    if(pageId === 'inicio') crearDecoracion('💚', true); 
-    if(pageId === 'historia') crearDecoracion('🌸');
-    if(pageId === 'tiempo') crearDecoracion('💜', false, true);
-    if(pageId === 'juntos') { crearDecoracion('🖤', false, false, true); renderPuzzle(); } 
-    if(pageId === 'felicidades') crearDecoracion('🎉', true);
-    if(pageId === 'recuerdos') crearDecoracion('💭', false, false, false);
+    // Decoración temática
+    if(pageId === 'inicio') crearDecoracion(['💚', '✨', '🍃'], true); 
+    if(pageId === 'historia') crearDecoracion(['🌸', '💌', '💖']);
+    if(pageId === 'tiempo') crearDecoracion(['⏳', '💜', '🌙']);
+    if(pageId === 'juntos') crearDecoracion(['🖤', '🧩', '✨']); 
+    if(pageId === 'felicidades') crearDecoracion(['🎉', '🎂', '💝']);
+    if(pageId === 'recuerdos') crearDecoracion(['💭', '🎵', '🥰']);
 }
 
 let decorInterval;
-function crearDecoracion(symbol, mixColors=false, purpleTheme=false, blackTheme=false) {
-    // Velocidad aumentada (400ms en lugar de 600ms) para más elementos
+// Nueva función mejorada para objetos flotantes
+function crearDecoracion(symbols, mixColors=false) {
     decorInterval = setInterval(() => {
         const el = document.createElement('div');
         el.classList.add('floating-element');
-        let content = symbol;
-        if(mixColors) content = Math.random() > 0.5 ? '❤️' : symbol;
-        if(purpleTheme) content = Math.random() > 0.5 ? '💜' : '🦇';
-        if(blackTheme) content = Math.random() > 0.5 ? '🖤' : '🥀';
+        
+        // Elegir símbolo aleatorio
+        let content = symbols[Math.floor(Math.random() * symbols.length)];
+        if(mixColors && Math.random() > 0.7) content = '❤️';
+        
         el.textContent = content;
         el.style.left = Math.random() * 95 + 'vw'; 
-        el.style.fontSize = (Math.random() * 30 + 20) + 'px';
-        el.style.animationDuration = (Math.random() * 10 + 8) + 's'; 
+        el.style.fontSize = (Math.random() * 30 + 15) + 'px';
+        
+        // Movimiento lateral aleatorio
+        const moveX = (Math.random() * 200 - 100) + 'px';
+        el.style.setProperty('--moveX', moveX);
+        
+        el.style.animationDuration = (Math.random() * 10 + 10) + 's'; 
         document.body.appendChild(el);
-        setTimeout(() => { el.remove(); }, 15000);
-    }, 400); 
+        setTimeout(() => { el.remove(); }, 20000);
+    }, 500); 
 }
+
 function limpiarDecoracion() {
     clearInterval(decorInterval);
     document.querySelectorAll('.floating-element').forEach(el => el.remove());
 }
 
-crearDecoracion('💚', true); 
+// Iniciar decoración por defecto
+crearDecoracion(['💚', '✨', '🍃'], true); 
 
 function abrirRegaloInicio() {
-    document.getElementById('mensaje-oculto').style.display = 'block';
-    const scrap = document.getElementById('inicio-scrapbook');
-    scrap.style.display = 'flex';
-    scrap.animate([{ opacity: 0, transform: 'translateY(50px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 1000 });
+    // Ocultar el Hero con animación
+    const hero = document.getElementById('hero-block');
+    hero.style.opacity = '0';
+    setTimeout(() => {
+        hero.style.display = 'none';
+        // Mostrar el contenido
+        const contenido = document.getElementById('contenido-inicio');
+        contenido.style.display = 'flex';
+        contenido.animate([
+            { opacity: 0, transform: 'translateY(50px)' }, 
+            { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 1000, fill: 'forwards' });
+    }, 800);
 }
 
 function abrirJardin() { document.getElementById('jardin-secreto').style.display = 'flex'; }
@@ -94,10 +111,6 @@ let selectedIndex = -1;
 function renderPuzzle() {
     const container = document.getElementById('puzzle-container');
     container.innerHTML = '';
-
-    if (currentPieces.every((v, i) => v === i)) {
-        // Si ya está resuelto, no hacemos nada hasta que se reinicie
-    }
     
     currentPieces.forEach((val, index) => {
         const div = document.createElement('div');
