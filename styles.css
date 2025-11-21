@@ -153,11 +153,11 @@ nav ul li button:hover {
 .scrap-item {
     position: relative;
     background: #fff;
-    padding: 15px 15px 60px 15px; /* Espacio extra abajo tipo polaroid */
+    padding: 15px 15px 60px 15px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     width: 280px;
     transform: rotate(var(--rotation));
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Rebote suave */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     border-radius: 4px;
 }
 .scrap-item:hover { 
@@ -213,12 +213,18 @@ nav ul li button:hover {
 .flower-msg { font-size: 2.5rem; color: #e91e63; margin-top: 40px; font-weight: bold; min-height: 60px; text-shadow: 2px 2px 0 #fff; font-family: 'Great Vibes', cursive; }
 .close-btn { position: absolute; top: 20px; right: 20px; }
 
-/* --- 7. TARJETAS (TIEMPO) --- */
+/* --- 7. TARJETAS (TIEMPO) - MODIFICADO PARA MAS TEXTO --- */
 .cards-grid { 
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    display: grid; 
+    /* Aumenté el minmax a 260px para que sean un poco más anchas */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
     gap: 30px; padding: 20px; max-width: 1100px; margin: 0 auto; width: 100%; justify-content: center; 
 }
-.card { height: 320px; perspective: 1000px; cursor: pointer; }
+.card { 
+    /* ALTURA AUMENTADA DE 320px A 420px PARA QUE QUEPA TODO EL TEXTO */
+    height: 420px; 
+    perspective: 1000px; cursor: pointer; 
+}
 .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
 .card.flipped .card-inner { transform: rotateY(180deg); }
 .card-front, .card-back { 
@@ -234,13 +240,18 @@ nav ul li button:hover {
 .card-back { 
     background: #fff; color: #4a148c; transform: rotateY(180deg); 
     font-size: 1rem; line-height: 1.6; border: 2px solid #e1bee7; 
+    /* Padding extra para que el texto respire */
+    padding: 25px;
 }
 .card-front h3 { 
-    margin-top: 15px; font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #8e24aa;
+    margin-top: 15px; font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #8e24aa;
 }
 .card-img-mini {
-    width: 130px; height: 130px; object-fit: cover; border-radius: 50%; 
+    /* IMAGEN AUMENTADA DE 130px A 150px */
+    width: 150px; height: 150px; 
+    object-fit: cover; border-radius: 50%; 
     border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    margin-bottom: 20px;
 }
 
 /* --- 8. PUZZLE --- */
@@ -259,7 +270,7 @@ nav ul li button:hover {
 /* --- 9. PROMESA (PERGAMINO) --- */
 .parchment { 
     width: 70px; height: 400px; background: #f5e6c4; border-radius: 35px; margin: 50px auto; 
-    cursor: pointer; transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efecto elástico */
+    cursor: pointer; transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55); 
     position: relative; overflow: hidden; 
     box-shadow: 15px 15px 40px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;
     border: 1px solid #dccab1;
