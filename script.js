@@ -164,7 +164,7 @@ function iniciarSecuenciaTinta() {
     tintaSection.style.display = 'flex';
     limpiarDecoracion();
 
-    const frases = ["Cada sonrisa tuya...", "Ilumina mi mundo...", "Eres mi presente...", "Y quiero que seas mi futuro...", "Felices 3 meses amor."];
+    const frases = ["Cada sonrisa y risa tuya.", "Ilumina mi mundo", "Eres mi presente", "Y quiero que seas mi futuro.", "Felices 3 meses amor, gracias por todo hasta ahora, TE AMOO MI AMORRR"];
     let i = 0;
     document.getElementById('lyrics-box').innerText = "";
     document.getElementById('final-msg').style.opacity = '0';
@@ -198,9 +198,9 @@ function iniciarAnimacionFelicidades() {
     
     const textBox = document.getElementById('texto-final-animado');
     const frases = [
-        "En estos 3 meses...", "Me has enseñado lo que es amar.",
-        "Gracias por cada instante.", "Vamos por más recuerdos juntos...",
-        "Te amo con todo mi corazón."
+        "En estos 3 meses", "Me has enseñado lo que es amar, me has enseñado a cuidarme y me has enseñado a ser mejor",
+        "Gracias por cada instante, por cada momento y por cada experiencia.", "Vamos por más recuerdos juntos, vamos a vivir toda una vida llena de recuerdos",
+        "Felices 3 meses mi amor, Te amo con todo mi alma y corazon Mia."
     ];
     let i = 0;
     textBox.style.opacity = 1;
@@ -217,3 +217,4 @@ function iniciarAnimacionFelicidades() {
         i++;
     }, 3000);
 }
+
