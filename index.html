@@ -1,335 +1,331 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felices 3 Meses Mi Niña Preciosa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;600&family=Indie+Flower&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felices 3 Meses Mi Niña Preciosa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Indie+Flower&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Fondo animado global -->
 <div class="background-animation"></div>
 
 <header>
-    <nav>
-        <ul>
-            <li><button onclick="showPage('inicio')">Tu regalito</button></li>
-            <li><button onclick="showPage('historia')">Nuestra Historia</button></li>
-            <li><button onclick="showPage('tiempo')">Tiempo y Amor</button></li>
-            <li><button onclick="showPage('juntos')">Juntos x100empre</button></li>
-            <li><button onclick="showPage('promesa')">Promesa</button></li>
-            <li><button onclick="showPage('felicidades')">Felicidades</button></li>
-            <li><button onclick="showPage('recuerdos')" class="nav-heart-btn" title="Recuerdos sobre ti">❤️</button></li>
-        </ul>
-    </nav>
+    <nav>
+        <ul>
+            <li><button onclick="showPage('inicio')">Tu regalito</button></li>
+            <li><button onclick="showPage('historia')">Nuestra Historia</button></li>
+            <li><button onclick="showPage('tiempo')">Tiempo y Amor</button></li>
+            <li><button onclick="showPage('juntos')">Juntos x100empre</button></li>
+            <li><button onclick="showPage('promesa')">Promesa</button></li>
+            <li><button onclick="showPage('felicidades')">Felicidades</button></li>
+            <li><button onclick="showPage('recuerdos')" class="nav-heart-btn" title="Recuerdos sobre ti">❤️</button></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- SECCIÓN INICIO -->
 <section id="inicio" class="page-section active-section">
-    <!-- Contenedor Hero Centrado -->
-    <div class="hero-container" id="hero-block">
-        <div class="hero-content">
-            <div class="heart-btn-start" onclick="abrirRegaloInicio()">❤️</div>
-            <h2 class="hero-text">Felices 3 meses mi amor</h2>
-            <p class="hero-subtext">Toca el corazón para ver tu sorpresa</p>
-        </div>
-    </div>
-    
-    <div id="contenido-inicio" class="hidden-content">
-        <div id="mensaje-oculto" style="margin-bottom:40px; max-width: 800px; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            <h1 class="section-title" style="color: #2e7d32;">¡Te Amo Princesa!</h1>
-            <p style="font-size: 1.2rem; line-height: 1.6;">Ya van 3 meses mi amorrr, quien diria que esa declaracion de amor tan boba y timida se convertiria en todo este amor que sentimos y que ahora florece con el tiempo demostrando que ambos estamos muy enamorados, que ambos somos el uno para el otro y que no importa la distancia o el tiempo, mi amor por ti siempre sera eterno.</p>
-        </div>
+    <div class="hero-container" id="hero-block">
+        <div class="hero-content">
+            <div class="heart-btn-start" onclick="abrirRegaloInicio()">❤️</div>
+            <h2 class="hero-text">Felices 3 meses mi amor</h2>
+            <p class="hero-subtext">Toca el corazón para ver tu sorpresa</p>
+        </div>
+    </div>
+    
+    <div id="contenido-inicio" class="hidden-content">
+        <div class="glass-box" id="mensaje-oculto">
+            <h1 class="section-title" style="color: #d81b60;">¡Te Amo Princesa!</h1>
+            <p style="font-size: 1.2rem; line-height: 1.6;">Ya van 3 meses mi amorrr, quien diria que esa declaracion de amor tan boba y timida se convertiria en todo este amor que sentimos y que ahora florece con el tiempo demostrando que ambos estamos muy enamorados, que ambos somos el uno para el otro y que no importa la distancia o el tiempo, mi amor por ti siempre sera eterno.</p>
+        </div>
 
-        <div class="scrapbook-layout" id="inicio-scrapbook">
-            <div class="scrap-item" style="--rotation: 3deg;">
-                <img src="fotos/1.jpg" class="scrap-img" onerror="this.style.display='none'">
-                <div class="scrap-text">Desde ese día en donde te pedí que seas mi novia he sido el hombre más feliz del mundo, te lo prometo. Solamente tu existencia ya me hace feliz.</div>
-            </div>
-            <div class="scrap-note">"Tu eres mi vida entera."</div>
-            <div class="scrap-item" style="--rotation: -2deg;">
-                <img src="fotos/2.jpg" class="scrap-img" onerror="this.style.display='none'">
-                <div class="scrap-text">A veces me pongo a pensar en lo bobos que somos ambos, pero aún así disfrutamos el tiempo juntos, que ese tiempo no es en vano y que vale totalmente la pena.</div>
-            </div>
-            <div class="scrap-item" style="--rotation: 4deg;">
-                <img src="fotos/3.jpg" class="scrap-img" onerror="this.style.display='none'">
-                <div class="scrap-text">Tus risas, tus locuras, tu voz y todas tus ideas son mi vida y mi lugar seguro. Aquello que quiero siempre en mi vida.</div>
-            </div>
-            <div class="scrap-item" style="--rotation: -3deg;">
-                <img src="fotos/4.jpg" class="scrap-img" onerror="this.style.display='none'">
-                <div class="scrap-text">Una vida juntos es lo que quiero. Una vida donde estemos el uno para el otro incondicionalmente.</div>
-            </div>
-            <div class="scrap-item" style="--rotation: 2deg;">
-                <img src="fotos/5.jpg" class="scrap-img" onerror="this.style.display='none'">
-                <div class="scrap-text">Puedes creer que en 3 meses hayamos vivido tantas cosas? Es impresionante lo rápido que pasa el tiempo.</div>
-            </div>
-        </div>
-    </div>
+        <div class="scrapbook-layout" id="inicio-scrapbook">
+            <div class="scrap-item" style="--rotation: 3deg;">
+                <div class="tape"></div>
+                <img src="fotos/1.jpg" class="scrap-img" onerror="this.style.display='none'">
+                <div class="scrap-text">Desde ese día en donde te pedí que seas mi novia he sido el hombre más feliz del mundo, te lo prometo. Solamente tu existencia ya me hace feliz.</div>
+            </div>
+            <div class="scrap-note">
+                <div class="pin"></div>
+                "Tu eres mi vida entera."
+            </div>
+            <div class="scrap-item" style="--rotation: -2deg;">
+                <div class="tape"></div>
+                <img src="fotos/2.jpg" class="scrap-img" onerror="this.style.display='none'">
+                <div class="scrap-text">A veces me pongo a pensar en lo bobos que somos ambos, pero aún así disfrutamos el tiempo juntos, que ese tiempo no es en vano y que vale totalmente la pena.</div>
+            </div>
+            <div class="scrap-item" style="--rotation: 4deg;">
+                <div class="tape"></div>
+                <img src="fotos/3.jpg" class="scrap-img" onerror="this.style.display='none'">
+                <div class="scrap-text">Tus risas, tus locuras, tu voz y todas tus ideas son mi vida y mi lugar seguro. Aquello que quiero siempre en mi vida.</div>
+            </div>
+            <div class="scrap-item" style="--rotation: -3deg;">
+                <div class="tape"></div>
+                <img src="fotos/4.jpg" class="scrap-img" onerror="this.style.display='none'">
+                <div class="scrap-text">Una vida juntos es lo que quiero. Una vida donde estemos el uno para el otro incondicionalmente.</div>
+            </div>
+            <div class="scrap-item" style="--rotation: 2deg;">
+                <div class="tape"></div>
+                <img src="fotos/5.jpg" class="scrap-img" onerror="this.style.display='none'">
+                <div class="scrap-text">Puedes creer que en 3 meses hayamos vivido tantas cosas? Es impresionante lo rápido que pasa el tiempo.</div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- SECCIÓN HISTORIA -->
 <section id="historia" class="page-section">
-    <h2 class="section-title">Nuestra Historia 🌸</h2>
-    <div class="scrapbook-layout">
-        <div class="scrap-item" style="--rotation: -1deg;">
-            <img src="fotos/6.jpg" class="scrap-img" onerror="this.style.display='none'">
-            <div class="scrap-text">Nuestra primera llamada fue de lo más lindo que pudo haber pasado. Amo estar contigo, amo pasar junto a ti. Te amo a ti</div>
-        </div>
-        <div class="scrap-item" style="--rotation: 2deg;">
-            <img src="fotos/7.jpg" class="scrap-img" onerror="this.style.display='none'">
-            <div class="scrap-text">Los momentos juntos aún con complicaciones y que aveces no sean los mejores eso no hace que deje de amarte.</div>
-        </div>
-        <div class="scrap-item" style="--rotation: 3deg;">
-            <img src="fotos/8.jpg" class="scrap-img" onerror="this.style.display='none'">
-            <div class="scrap-text">Todos los detalles que te doy son porque te amo, porque todo mi corazón quiere darte todo ese amor que alguna ves quisiste.</div>
-        </div>
-        <div class="scrap-item" style="background: #fff3e0; cursor:pointer; --rotation: -2deg;" onclick="abrirJardin()">
-            <div style="font-size: 50px;">🌷​</div>
-            <div class="scrap-text">Un pequeño detallito en esta flor…</div>
-            <small style="margin-top:10px;">Ven a ver lo que hay adentro de esta flor</small>
-        </div>
-    </div>
+    <h2 class="section-title">Nuestra Historia 🌸</h2>
+    <div class="scrapbook-layout">
+        <div class="scrap-item" style="--rotation: -1deg;">
+            <div class="tape"></div>
+            <img src="fotos/6.jpg" class="scrap-img" onerror="this.style.display='none'">
+            <div class="scrap-text">Nuestra primera llamada fue de lo más lindo que pudo haber pasado. Amo estar contigo, amo pasar junto a ti. Te amo a ti</div>
+        </div>
+        <div class="scrap-item" style="--rotation: 2deg;">
+            <div class="tape"></div>
+            <img src="fotos/7.jpg" class="scrap-img" onerror="this.style.display='none'">
+            <div class="scrap-text">Los momentos juntos aún con complicaciones y que aveces no sean los mejores eso no hace que deje de amarte.</div>
+        </div>
+        <div class="scrap-item" style="--rotation: 3deg;">
+            <div class="tape"></div>
+            <img src="fotos/8.jpg" class="scrap-img" onerror="this.style.display='none'">
+            <div class="scrap-text">Todos los detalles que te doy son porque te amo, porque todo mi corazón quiere darte todo ese amor que alguna ves quisiste.</div>
+        </div>
+        <div class="scrap-item special-flower" onclick="abrirJardin()">
+            <div style="font-size: 60px;">🌷​</div>
+            <div class="scrap-text">Un pequeño detallito en esta flor…</div>
+            <small>Clic para ver</small>
+        </div>
+    </div>
 </section>
 
-<!-- JARDÍN SECRETO -->
 <div id="jardin-secreto">
-    <button class="close-btn" onclick="cerrarJardin()">Volver</button>
-    <h2 style="color:#e91e63; font-family:'Great Vibes'; font-size:3rem; text-align:center;">Deshoja mi amor...</h2>
-    <div class="flower">
-        <div class="center" onclick="clickCentroFlor()"></div>
-        <div class="petal p1" onclick="quitarPetalo(this, 'Eres todo para mi')"></div>
-        <div class="petal p2" onclick="quitarPetalo(this, 'Te has convertido en mi persona favorita de todo el mundo')"></div>
-        <div class="petal p3" onclick="quitarPetalo(this, 'Quiero mil vidas junto a ti')"></div>
-        <div class="petal p4" onclick="quitarPetalo(this, 'Te dije ya que te amo?')"></div>
-        <div class="petal p5" onclick="quitarPetalo(this, 'Eres el amor de mi vida')"></div>
-        <div class="petal p6" onclick="quitarPetalo(this, 'Contigo siento el amor verdadero')"></div>
-    </div>
-    <div class="flower-msg" id="flower-msg"></div>
+    <button class="close-btn" onclick="cerrarJardin()">Volver</button>
+    <h2 style="color:#e91e63; font-family:'Great Vibes'; font-size:3rem; text-align:center;">Deshoja mi amor...</h2>
+    <div class="flower">
+        <div class="center" onclick="clickCentroFlor()"></div>
+        <div class="petal p1" onclick="quitarPetalo(this, 'Eres todo para mi')"></div>
+        <div class="petal p2" onclick="quitarPetalo(this, 'Te has convertido en mi persona favorita de todo el mundo')"></div>
+        <div class="petal p3" onclick="quitarPetalo(this, 'Quiero mil vidas junto a ti')"></div>
+        <div class="petal p4" onclick="quitarPetalo(this, 'Te dije ya que te amo?')"></div>
+        <div class="petal p5" onclick="quitarPetalo(this, 'Eres el amor de mi vida')"></div>
+        <div class="petal p6" onclick="quitarPetalo(this, 'Contigo siento el amor verdadero')"></div>
+    </div>
+    <div class="flower-msg" id="flower-msg"></div>
 </div>
 
-<!-- SECCIÓN TIEMPO -->
 <section id="tiempo" class="page-section">
-    <h2 class="section-title">Tiempo y Amor ⏳</h2>
-    <div class="cards-grid">
-        <!-- Tarjeta 1 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/9.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T1'">
-                    <h3>Eternidad</h3>
-                </div>
-                <div class="card-back">Nuestro amor va mas alla de las fronteras convencionales, cosas como el tiempo o la distancia puede afectar todo esto que sentimos, nuestro amor es tan pero tan fuerte que se que aun si vivieras en un planeta diferente, te seguiria amando con la misma intensidad con la que lo hago ahora..</div>
-            </div>
-        </div>
-        <!-- Tarjeta 2 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/10.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T2'">
-                    <h3>Admiración</h3>
-                </div>
-                <div class="card-back">Te admiro realmente, me pareces una mujer preciosa, fuerte, valiente, encantadora, divertida, carismatica y aunque tu no te veas de esa manera voy a hacer que te veas asi, voy a lograr hacer que te veas con los mismos ojos de amor y admiracion con los que te veo. Pero sobre todo recuerda que para mi y ante mis ojitos eres perfecta.</div>
-            </div>
-        </div>
-        <!-- Tarjeta 3 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/11.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T3'">
-                    <h3>Magia</h3>
-                </div>
-                <div class="card-back">Quien diria que el tiempo contigo y estar junto ti parece arte de magia, estar junto a ti me hace tan pero tan feliz que parece un hechizo de amor, dicho hechizo que hace que todo sea perfecto, parezca un sueño pero sea un sueño, magia o realidad, no quiero separarme de ti nunca mi nena hermosa.</div>
-            </div>
-        </div>
-        <!-- Tarjeta 4 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/12.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T4'">
-                    <h3>3 Meses</h3>
-                </div>
-                <div class="card-back">90 días de felicidad absoluta, 90 dias donde nos hemos conocido cada dia mas, 90 dias que solo son el inicio de toda una vida juntos. Pareciera ayer que fue el dia que me declare, pero miranos ya vamos 90 dias juntos donde compartimos alegrias y tristezas, creeme que espero con ansias seguir compartiendo y viviendo contigo dia tras dia</div>
-            </div>
-        </div>
-        <!-- Tarjeta 5 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/13.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T5'">
-                    <h3>Compañía</h3>
-                </div>
-                <div class="card-back">Eres mi mejor amiga y mi novia, mi compañera de vida, mi princesa, mi niña, mi nena, mi amor, mi esposa, el amor de mi vida. El simple hecho de estar contigo me hace tan feliz que quiero permanecer y que permanezcas conmigo durante toda mi vida y ser felices juntos igual que el primer dia.</div>
-            </div>
-        </div>
-        <!-- Tarjeta 6 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/14.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T6'">
-                    <h3>Futuro</h3>
-                </div>
-                <div class="card-back">Quiero construir todo a tu lado, quiero atravesar millones de experiencias contigo, quiero estar contigo en las buenas y en las malas, quiero estar contigo por el resto de mi vida. Prefiero arreglar las cosas contigo mil veces que pensar en estar con alguien mas.</div>
-            </div>
-        </div>
-        <!-- Tarjeta 7 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="fotos/15.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T7'">
-                    <h3>Confianza</h3>
-                </div>
-                <div class="card-back">Saber que puedo contarte todo, mis miedos y mis alegrías, y que siempre estarás ahí para escucharme es el regalo más grande de mi vida, eres todo para mi, significas y me importas tanto que te amo mas a ti de lo que me amo yo a mi mismo mi niña preci</div>
-            </div>
-        </div>
-        <!-- Tarjeta 8 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="16.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T8'">
-                    <h3>Destino</h3>
-                </div>
-                <div class="card-back">Estaba escrito en las estrellas que tú y yo nos encontraríamos. No es casualidad, es nuestro destino estar juntos, el tiempo y todo se alineo para que en este momento de nuestras vidas nos encontraramos y miranos, de verdad somos el uno para el otro.</div>
-            </div>
-        </div>
-        <!-- Tarjeta 9 -->
-        <div class="card" onclick="this.classList.toggle('flipped')">
-            <div class="card-inner">
-                <div class="card-front">
-                    <img src="17.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T9'">
-                    <h3>Mia</h3>
-                </div>
-                <div class="card-back">Gracias por entrar en mi vida, gracias por aceptarme como tu novio, gracias por ser tu misma, gracias por dejarme conocerte, gracias por quedarte conmigo, simplemente gracias por todo Mia, de verdad te amo y estoy totalmente agradecido contigo por todo lo que eres, haces y has hecho por mi. Gracias Mia.</div>
-            </div>
-        </div>
-    </div>
+    <h2 class="section-title">Tiempo y Amor ⏳</h2>
+    <div class="cards-grid">
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/9.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T1'">
+                    <h3>Eternidad</h3>
+                </div>
+                <div class="card-back">Nuestro amor va mas alla de las fronteras convencionales, cosas como el tiempo o la distancia puede afectar todo esto que sentimos, nuestro amor es tan pero tan fuerte que se que aun si vivieras en un planeta diferente, te seguiria amando con la misma intensidad con la que lo hago ahora..</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/10.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T2'">
+                    <h3>Admiración</h3>
+                </div>
+                <div class="card-back">Te admiro realmente, me pareces una mujer preciosa, fuerte, valiente, encantadora, divertida, carismatica y aunque tu no te veas de esa manera voy a hacer que te veas asi, voy a lograr hacer que te veas con los mismos ojos de amor y admiracion con los que te veo. Pero sobre todo recuerda que para mi y ante mis ojitos eres perfecta.</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/11.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T3'">
+                    <h3>Magia</h3>
+                </div>
+                <div class="card-back">Quien diria que el tiempo contigo y estar junto ti parece arte de magia, estar junto a ti me hace tan pero tan feliz que parece un hechizo de amor, dicho hechizo que hace que todo sea perfecto, parezca un sueño pero sea un sueño, magia o realidad, no quiero separarme de ti nunca mi nena hermosa.</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/12.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T4'">
+                    <h3>3 Meses</h3>
+                </div>
+                <div class="card-back">90 días de felicidad absoluta, 90 dias donde nos hemos conocido cada dia mas, 90 dias que solo son el inicio de toda una vida juntos. Pareciera ayer que fue el dia que me declare, pero miranos ya vamos 90 dias juntos donde compartimos alegrias y tristezas, creeme que espero con ansias seguir compartiendo y viviendo contigo dia tras dia</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/13.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T5'">
+                    <h3>Compañía</h3>
+                </div>
+                <div class="card-back">Eres mi mejor amiga y mi novia, mi compañera de vida, mi princesa, mi niña, mi nena, mi amor, mi esposa, el amor de mi vida. El simple hecho de estar contigo me hace tan feliz que quiero permanecer y que permanezcas conmigo durante toda mi vida y ser felices juntos igual que el primer dia.</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/14.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T6'">
+                    <h3>Futuro</h3>
+                </div>
+                <div class="card-back">Quiero construir todo a tu lado, quiero atravesar millones de experiencias contigo, quiero estar contigo en las buenas y en las malas, quiero estar contigo por el resto de mi vida. Prefiero arreglar las cosas contigo mil veces que pensar en estar con alguien mas.</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="fotos/15.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T7'">
+                    <h3>Confianza</h3>
+                </div>
+                <div class="card-back">Saber que puedo contarte todo, mis miedos y mis alegrías, y que siempre estarás ahí para escucharme es el regalo más grande de mi vida, eres todo para mi, significas y me importas tanto que te amo mas a ti de lo que me amo yo a mi mismo mi niña preci</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="16.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T8'">
+                    <h3>Destino</h3>
+                </div>
+                <div class="card-back">Estaba escrito en las estrellas que tú y yo nos encontraríamos. No es casualidad, es nuestro destino estar juntos, el tiempo y todo se alineo para que en este momento de nuestras vidas nos encontraramos y miranos, de verdad somos el uno para el otro.</div>
+            </div>
+        </div>
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="17.jpg" class="card-img-mini" onerror="this.onerror=null; this.src='https://placehold.co/100x100/B39DDB/fff?text=T9'">
+                    <h3>Mia</h3>
+                </div>
+                <div class="card-back">Gracias por entrar en mi vida, gracias por aceptarme como tu novio, gracias por ser tu misma, gracias por dejarme conocerte, gracias por quedarte conmigo, simplemente gracias por todo Mia, de verdad te amo y estoy totalmente agradecido contigo por todo lo que eres, haces y has hecho por mi. Gracias Mia.</div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- SECCIÓN JUNTOS (PUZZLE) -->
 <section id="juntos" class="page-section">
-    <h2 class="section-title">Juntos x100empre 🖤</h2>
-    <p style="margin-bottom: 20px;">1. Sube tu foto especial, 2. Arma la foto para ver el mensaje.</p>
-    
-    <div style="margin-bottom: 20px; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <input type="file" id="puzzle-upload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
-        <button onclick="document.getElementById('puzzle-upload').click()" 
-                style="padding: 10px 20px; background: #673ab7; color: white; border: none; border-radius: 30px; cursor: pointer; font-size: 1.1rem; transition: background 0.3s;">
-            Subir Foto Puzzle
-        </button>
-        <span id="image-status" style="font-size: 0.9rem; color: #666; padding-left: 10px;">(Usando foto por defecto)</span>
-    </div>
-    <div id="puzzle-container"></div>
+    <h2 class="section-title">Juntos x100empre 🖤</h2>
+    <div class="glass-box" style="max-width:600px; margin:0 auto 20px auto;">
+        <p>1. Sube tu foto especial, 2. Arma la foto para ver el mensaje.</p>
+    </div>
+    
+    <div style="margin-bottom: 20px; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 10px;">
+        <input type="file" id="puzzle-upload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+        <button onclick="document.getElementById('puzzle-upload').click()" class="modern-btn">
+            Subir Foto Puzzle
+        </button>
+        <span id="image-status" style="font-size: 0.9rem; color: #666;">(Usando foto por defecto)</span>
+    </div>
+    <div id="puzzle-container"></div>
 </section>
 
-<!-- RECOMPENSA PUZZLE -->
 <div id="puzzle-reward">
-    <h2 style="font-family:'Great Vibes'; font-size:4rem; color:#e91e63; margin-bottom: 20px;">¡Lo logramos!</h2>
-    <div style="max-width: 600px; font-size: 1.5rem; line-height: 1.8; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 20px;">
-        <p>Al igual que estas piezas, nuestras vidas encajan a la perfección.<br> 
-        Somos el uno para el otro, pieza por pieza, día a día, momento por momento, somos la media naranja del otro.</p>
-        <p>Contigo encajo a la perfeccion, contigo soy yo mismo, contigo todo se siente bien, estar contigo es el amor verdadero. Tu eres el amor de mi vida Mia.<br> 
-    </div>
-    <button onclick="cerrarRecompensa()" 
-            style="margin-top:30px; padding:10px 30px; font-size:1.2rem; background:#e91e63; color:white; border:none; border-radius:30px; cursor:pointer; transition: background 0.3s;">
-        Cerrar y Continuar
-    </button>
+    <h2 style="font-family:'Great Vibes'; font-size:4rem; color:#e91e63; margin-bottom: 20px;">¡Lo logramos!</h2>
+    <div class="glass-box" style="background: rgba(255,255,255,0.95);">
+        <p>Al igual que estas piezas, nuestras vidas encajan a la perfección.<br> 
+        Somos el uno para el otro, pieza por pieza, día a día, momento por momento, somos la media naranja del otro.</p>
+        <p>Contigo encajo a la perfeccion, contigo soy yo mismo, contigo todo se siente bien, estar contigo es el amor verdadero. Tu eres el amor de mi vida Mia.<br> 
+    </div>
+    <button onclick="cerrarRecompensa()" class="modern-btn" style="margin-top:30px;">
+        Cerrar y Continuar
+    </button>
 </div>
 
-<!-- PAGINA PROMESA -->
 <section id="promesa" class="page-section">
-    <h2 class="section-title">Nuestra Promesa</h2>
-    <div class="parchment" id="pergamino" onclick="this.classList.toggle('open')">
-        <span class="parchment-hint">📜 Toca para leer</span>
-        <div class="parchment-text">
-            <p>Yo Matias prometo hacerte feliz durante toda mi vida, permanecer junto a ti en los buenos y malos momentos, amarte incondiconalmente sin importar el que.</p>
-            <p>Prometo cuidarte y protegerte de todo dolor posible, apoyarte y dar solucion a los problemas que puedas tener, dar todo de mi para la relacion</p>
-            <p>Prometo nunca dejarte sola, nunca cargaras con el peso de todo tu sola y prometo nunca abandonarte, tu y yo estaremos juntos para siempre Mia</p>
-        </div>
-    </div>
-    <div style="margin-top:50px; text-align:center;">
-        <div class="quill-pen" onclick="iniciarSecuenciaTinta()">🪶</div>
-        <p>Eres la tinta y el color de mi vida</p>
-    </div>
+    <h2 class="section-title">Nuestra Promesa</h2>
+    <div class="parchment" id="pergamino" onclick="this.classList.toggle('open')">
+        <span class="parchment-hint">📜 Toca para leer</span>
+        <div class="parchment-text">
+            <p>Yo Matias prometo hacerte feliz durante toda mi vida, permanecer junto a ti en los buenos y malos momentos, amarte incondiconalmente sin importar el que.</p>
+            <p>Prometo cuidarte y protegerte de todo dolor posible, apoyarte y dar solucion a los problemas que puedas tener, dar todo de mi para la relacion</p>
+            <p>Prometo nunca dejarte sola, nunca cargaras con el peso de todo tu sola y prometo nunca abandonarte, tu y yo estaremos juntos para siempre Mia</p>
+        </div>
+    </div>
+    <div style="margin-top:50px; text-align:center;">
+        <div class="quill-pen" onclick="iniciarSecuenciaTinta()">🪶</div>
+        <p class="glass-box" style="display:inline-block; padding:10px 25px;">Eres la tinta y el color de mi vida</p>
+    </div>
 </section>
 
-<!-- SECCION TINTA FINAL -->
 <section id="tinta-final">
-    <div class="lyrics-container" id="lyrics-box"></div>
-    <div class="final-big-text" id="final-msg" style="opacity: 0; transition: opacity 2s; font-size: 1.5rem;">
-        Tú eres la tinta que escribe mi vida, cada pagina escribes algo nuevo con amor, dedicacion y compromiso. <br> y le das color a mi día a día, brindas brillo y felicidad a mi estado de animo. brindas paz y calma a toda mi tormenta. Eres todo para mi Mia.
-    </div>
-    <button onclick="cerrarTinta()" style="margin-top:50px; background:transparent; border:1px solid white; color:white; padding:5px 15px; cursor:pointer; opacity:0.5;">Volver</button>
+    <div class="lyrics-container" id="lyrics-box"></div>
+    <div class="final-big-text" id="final-msg" style="opacity: 0; transition: opacity 2s; font-size: 1.5rem;">
+        Tú eres la tinta que escribe mi vida, cada pagina escribes algo nuevo con amor, dedicacion y compromiso. <br> y le das color a mi día a día, brindas brillo y felicidad a mi estado de animo. brindas paz y calma a toda mi tormenta. Eres todo para mi Mia.
+    </div>
+    <button onclick="cerrarTinta()" class="modern-btn" style="background:transparent; border:1px solid white; margin-top:50px;">Volver</button>
 </section>
 
-<!-- PAGINA FELICIDADES -->
 <section id="felicidades" class="page-section">
-    <div class="celebration-content">
-        <h1 class="section-title" style="font-size: 4rem;">Felicidades por los 3 meses</h1>
-        <div class="custom-msg-box">
-            <p>MI AMORRRRR<br><br>
-            YA ESTASS POR TERMINAR EL REGALOOO, YA FALTA LO ULTIMOO.<br>
-            RECUERDA QUE TE AMOO MI AMORRR, QUE ERES MI VIDA, EL AMOR DE MI VIDA.<br>
-            TE AMO MI AMORRR ERES UNA PRECIOSURA, TE ADORO CON TODO MI CORAZON, OJALA PUDIERAS VERTE COMO YO TE VEO</p>
-        </div>
-        <p style="color:#777; margin-bottom:10px; font-size:0.9rem;">(Toca el botón para una sorpresa final)</p>
-        <div class="play-btn" onclick="iniciarAnimacionFelicidades()">▶️</div>
-        <div id="texto-final-animado" class="animacion-texto-final"></div>
-    </div>
-    <audio id="audio-felicidades" src="musica/nsqk - NADIE MÁS! (Visualizer).mp3"></audio>
+    <div class="celebration-content">
+        <h1 class="section-title" style="font-size: 4rem;">Felicidades por los 3 meses</h1>
+        <div class="custom-msg-box">
+            <p>MI AMORRRRR<br><br>
+            YA ESTASS POR TERMINAR EL REGALOOO, YA FALTA LO ULTIMOO.<br>
+            RECUERDA QUE TE AMOO MI AMORRR, QUE ERES MI VIDA, EL AMOR DE MI VIDA.<br>
+            TE AMO MI AMORRR ERES UNA PRECIOSURA, TE ADORO CON TODO MI CORAZON, OJALA PUDIERAS VERTE COMO YO TE VEO</p>
+        </div>
+        <p style="color:#777; margin-bottom:10px; font-size:0.9rem;">(Toca el botón para una sorpresa final)</p>
+        <div class="play-btn" onclick="iniciarAnimacionFelicidades()">▶️</div>
+        <div id="texto-final-animado" class="animacion-texto-final"></div>
+    </div>
+    <audio id="audio-felicidades" src="musica/nsqk - NADIE MÁS! (Visualizer).mp3"></audio>
 </section>
 
-<!-- PAGINA RECUERDOS -->
 <section id="recuerdos" class="page-section">
-    <h2 class="section-title">Cosas que me recuerdan a ti</h2>
-    <p style="text-align:center; margin-bottom: 30px; font-size: 1.1rem;">Te amo tanto mi amor, sabes? hay muchas pero muchas cosas que me recuerdan a ti, aqui pondre algunitas como para terminar tu regalito y que puedas ir con lo siguiente mi princesa.</p>
-    
-    <div class="memories-grid">
-        <div class="memory-box">
-            <div class="memory-title">Lo que más amo</div>
-            <p>Me encanta cómo bajas la voz cuando tienes sueñito, como te pones rojita y dices AY cuando te digo cosas bonitas, amo cuando te quedas dormida, te ves tan bella como una nena pequeña. Me encanta como a pesar de todo sigues de pie avanzando y tratando de mejorar. Me encanta el sonido de tu voz, con escuchar una palabra tuya mi corazon salta de felicidad. Me encanta verte y ver esa preciosura de carita que tienes. Me encanta como sueles prestar atencion a algunos detalles mios que ni yo los recuerdo. Me encantas . AMO TODO DE TI.</p>
-        </div>
-        <div class="memory-box">
-            <div class="memory-title">Nuestra Canción</div>
-            <p>Esta canción es nuestra cancion, el simple hecho de escucharla o leer el titulo automaticamente pienso en ti. me encanta ello, me encanta que una cancion sea tan tuya que solo al escucharla puedo pensar en todos los momentos junto a ti.</p>
-            <a href="#" class="memory-link" target="_blank">🎵 Nuestra Canción</a>
-        </div>
-        <div class="memory-box">
-            <div class="memory-title">Tu primera foto</div>
-            <div style="width:100%; display:flex; justify-content:center;">
-                <img src="fotos/Mia.png" alt="Tu Primera Foto" class="memory-img" onerror="this.style.display='none'">
-            </div>
-            <p style="margin-top:10px; font-style: italic; color: #333;">Aún recuerdo la primera fotito que me enviaste, la primera foto que puse de fondo de pantalla, la primera foto a la que veia a cada rato, admirando la preciosura de mi novia, aquella foto tan preciosa que me encanta porque te veo, prque eres tu, porque para mi es especial.</p>
-        </div>
-        <div class="memory-box">
-            <div class="memory-title">Un video especial</div>
-            <p>Esto me da MUCHA PENA AMORRR, originalmente no lo iba a poner pero mi yo de chiquito amaba esta cancion y decia ojala algun dia pueda dedicarle esto a alguien realmente especial y que sea igual de rarita que yo, y bueno aqui estamos. espero no sea tan raro... TE AMOOOOO MI AMORRR:</p>
-            <a href="https://www.youtube.com/watch?v=PjJSY6o1clk&list=RDPjJSY6o1clk&start_radio=1" target="_blank" 
-               style="display:inline-block; margin-top:10px; padding:10px 20px; background:#f44336; color:white; text-decoration:none; border-radius:20px; font-weight:bold;">
-               ▶ Ver Video
-            </a>
-        </div>
-        <div class="memory-box">
-            <div class="memory-title">Tu</div>
-            <div style="width:100%; display:flex; justify-content:center;">
-                <img src="cinamonroll.jpg" alt="Otra Foto" class="memory-img" onerror="this.style.display='none'">
-            </div>
-            <p style="margin-top:10px;">Sabes, hay muchos personajes que me recuerdan a ti, pero principalmente cuando pienso en ti lo relaciono con un cinamonroll, tan chiquita, tan linda y adorable, que me dan muchas ganas de cuidarte, protegerte y besarte, me encantas demasiado y siempre pienso en ti al verlo.</p>
-        </div>
-        <div class="memory-box">
-            <div class="memory-title">Para el amor de mi vida</div>
-            <p>Eres mi sol, mi luna y todas mis estrellas, mi vida entera, mi amor, mi esposita, mi princesa, mi reina, mi niña, mi nena, mi chiquita, mi bebe, mi amorcito de mi vida, mi todo. Gracias por iluminar mi vida durante estos 3 meses.</p>
-            <p>Tres meses ya, quien lo diria, espero te haya gustado este regalito y bueno que sepas que es todo tuyo, es algo bobo y se que no hay mucho texto o cursilieria como los otros regalos pero espero te guste las animaciones, jueguitos y todo en general. Pero espero haya sido todo de tu agrado, que sepas que te amo, que es un detalle que nace de mi y que quise darte algo que sea elaborado y demuestre todo este amor que te tengo</p>
-            <p>Ahora como final mira el video que te mande y lee ese pequeñito texto para terminar todo, y gracias por leer y ver todo, FELICES 3 MESES MI AMORRR</p>
-        </div>
-    </div>
-    <div style="text-align:center; margin-top:20px;">
-        <button onclick="showPage('inicio')" style="padding:10px 20px; background:#e65100; color:white; border:none; border-radius:5px; cursor:pointer;">Volver al Inicio</button>
-    </div>
+    <h2 class="section-title">Cosas que me recuerdan a ti</h2>
+    <div class="glass-box" style="display:inline-block; margin-bottom:30px;">
+        <p>Te amo tanto mi amor, sabes? hay muchas pero muchas cosas que me recuerdan a ti, aqui pondre algunitas como para terminar tu regalito y que puedas ir con lo siguiente mi princesa.</p>
+    </div>
+    
+    <div class="memories-grid">
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Lo que más amo</div>
+            <p>Me encanta cómo bajas la voz cuando tienes sueñito, como te pones rojita y dices AY cuando te digo cosas bonitas, amo cuando te quedas dormida, te ves tan bella como una nena pequeña. Me encanta como a pesar de todo sigues de pie avanzando y tratando de mejorar. Me encanta el sonido de tu voz, con escuchar una palabra tuya mi corazon salta de felicidad. Me encanta verte y ver esa preciosura de carita que tienes. Me encanta como sueles prestar atencion a algunos detalles mios que ni yo los recuerdo. Me encantas . AMO TODO DE TI.</p>
+        </div>
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Nuestra Canción</div>
+            <p>Esta canción es nuestra cancion, el simple hecho de escucharla o leer el titulo automaticamente pienso en ti. me encanta ello, me encanta que una cancion sea tan tuya que solo al escucharla puedo pensar en todos los momentos junto a ti.</p>
+            <a href="#" class="modern-link" target="_blank">🎵 Nuestra Canción</a>
+        </div>
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Tu primera foto</div>
+            <div style="width:100%; display:flex; justify-content:center;">
+                <img src="fotos/Mia.png" alt="Tu Primera Foto" class="memory-img" onerror="this.style.display='none'">
+            </div>
+            <p style="margin-top:10px; font-style: italic; color: #333;">Aún recuerdo la primera fotito que me enviaste, la primera foto que puse de fondo de pantalla, la primera foto a la que veia a cada rato, admirando la preciosura de mi novia, aquella foto tan preciosa que me encanta porque te veo, prque eres tu, porque para mi es especial.</p>
+        </div>
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Un video especial</div>
+            <p>Esto me da MUCHA PENA AMORRR, originalmente no lo iba a poner pero mi yo de chiquito amaba esta cancion y decia ojala algun dia pueda dedicarle esto a alguien realmente especial y que sea igual de rarita que yo, y bueno aqui estamos. espero no sea tan raro... TE AMOOOOO MI AMORRR:</p>
+            <a href="https://www.youtube.com/watch?v=PjJSY6o1clk&list=RDPjJSY6o1clk&start_radio=1" target="_blank" class="modern-btn" style="font-size:0.9rem;">
+               ▶ Ver Video
+            </a>
+        </div>
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Tu</div>
+            <div style="width:100%; display:flex; justify-content:center;">
+                <img src="cinamonroll.jpg" alt="Otra Foto" class="memory-img" onerror="this.style.display='none'">
+            </div>
+            <p style="margin-top:10px;">Sabes, hay muchos personajes que me recuerdan a ti, pero principalmente cuando pienso en ti lo relaciono con un cinamonroll, tan chiquita, tan linda y adorable, que me dan muchas ganas de cuidarte, protegerte y besarte, me encantas demasiado y siempre pienso en ti al verlo.</p>
+        </div>
+        <div class="memory-box">
+            <div class="tape"></div>
+            <div class="memory-title">Para el amor de mi vida</div>
+            <p>Eres mi sol, mi luna y todas mis estrellas, mi vida entera, mi amor, mi esposita, mi princesa, mi reina, mi niña, mi nena, mi chiquita, mi bebe, mi amorcito de mi vida, mi todo. Gracias por iluminar mi vida durante estos 3 meses.</p>
+            <p>Tres meses ya, quien lo diria, espero te haya gustado este regalito y bueno que sepas que es todo tuyo, es algo bobo y se que no hay mucho texto o cursilieria como los otros regalos pero espero te guste las animaciones, jueguitos y todo en general. Pero espero haya sido todo de tu agrado, que sepas que te amo, que es un detalle que nace de mi y que quise darte algo que sea elaborado y demuestre todo este amor que te tengo</p>
+            <p>Ahora como final mira el video que te mande y lee ese pequeñito texto para terminar todo, y gracias por leer y ver todo, FELICES 3 MESES MI AMORRR</p>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+        <button onclick="showPage('inicio')" class="modern-btn">Volver al Inicio</button>
+    </div>
 </section>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
