@@ -33,6 +33,7 @@ function showPage(pageId) {
     }
 
     limpiarDecoracion();
+    // Frecuencia más rápida de decoración
     if(pageId === 'inicio') crearDecoracion('💚', true); 
     if(pageId === 'historia') crearDecoracion('🌸');
     if(pageId === 'tiempo') crearDecoracion('💜', false, true);
@@ -43,6 +44,7 @@ function showPage(pageId) {
 
 let decorInterval;
 function crearDecoracion(symbol, mixColors=false, purpleTheme=false, blackTheme=false) {
+    // Velocidad aumentada (400ms en lugar de 600ms) para más elementos
     decorInterval = setInterval(() => {
         const el = document.createElement('div');
         el.classList.add('floating-element');
@@ -56,7 +58,7 @@ function crearDecoracion(symbol, mixColors=false, purpleTheme=false, blackTheme=
         el.style.animationDuration = (Math.random() * 10 + 8) + 's'; 
         document.body.appendChild(el);
         setTimeout(() => { el.remove(); }, 15000);
-    }, 600); 
+    }, 400); 
 }
 function limpiarDecoracion() {
     clearInterval(decorInterval);
@@ -93,10 +95,8 @@ function renderPuzzle() {
     const container = document.getElementById('puzzle-container');
     container.innerHTML = '';
 
-    // Solo mezclamos si acabamos de entrar y ya estaba resuelto (para que el usuario tenga que jugar)
     if (currentPieces.every((v, i) => v === i)) {
-        // Nota: Si está resuelto al iniciar, lo mezclamos.
-        // Pero si el usuario lo acaba de resolver, NO lo mezclamos aquí.
+        // Si ya está resuelto, no hacemos nada hasta que se reinicie
     }
     
     currentPieces.forEach((val, index) => {
@@ -113,9 +113,7 @@ function renderPuzzle() {
             else {
                 [currentPieces[index], currentPieces[selectedIndex]] = [currentPieces[selectedIndex], currentPieces[index]];
                 selectedIndex = -1; 
-                renderPuzzle(); // Renderizamos el movimiento
-                
-                // Verificamos si ganó DESPUÉS del movimiento
+                renderPuzzle(); 
                 checkWin();
             }
         };
@@ -125,19 +123,14 @@ function renderPuzzle() {
 
 function checkWin() {
     if (currentPieces.every((v, i) => v === i)) {
-        // Si ganó, esperamos un poquito y mostramos el premio.
-        // NO REINICIAMOS las piezas aquí.
         setTimeout(() => {
             document.getElementById('puzzle-reward').style.display = 'flex';
         }, 300);
     }
 }
 
-// Función nueva para cerrar el premio y EN ESE MOMENTO reiniciar el juego
 function cerrarRecompensa() {
     document.getElementById('puzzle-reward').style.display = 'none';
-    
-    // Ahora sí mezclamos para la próxima vez
     currentPieces = [...pieces].sort(() => Math.random() - 0.5); 
     while(currentPieces.every((v, i) => v === i)) {
          currentPieces = [...pieces].sort(() => Math.random() - 0.5);
@@ -146,7 +139,6 @@ function cerrarRecompensa() {
 }
 
 window.onload = function() {
-    // Asegurar mezcla inicial
     currentPieces = [...pieces].sort(() => Math.random() - 0.5);
     renderPuzzle();
 }
